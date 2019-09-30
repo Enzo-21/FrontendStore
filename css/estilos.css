@@ -1,0 +1,126 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+}
+body {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0b7a1+0,8c3310+50,752201+51,bf6e4e+100;Brown+Gloss */
+background: #f0b7a1; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+height: 100%;
+background-attachment: fixed; 
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero {
+    margin-bottom: 40px;
+}
+
+.lista-productos {
+    margin-top: 25px;
+    padding: 0;
+}
+
+.lista-productos li {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+@media (min-width: 480px) {
+    .lista-productos li {
+        width: 50%
+    }
+
+    .lista-productos li:nth-child(2n + 1) {
+        clear: both;
+    }
+}
+
+@media (min-width: 768px) {
+    .lista-productos li {
+        width: 33.33%
+    }
+    .lista-productos li:nth-child(2n + 1 ) {
+        clear: unset;
+    }
+
+    .lista-productos li:nth-child(3n +1) {
+        clear: both;
+    }
+}
+
+.lista-productos li img {
+    border-radius: 10px;
+    transition: all ease .3s;
+}
+
+.lista-productos li img:hover {
+    transform: scale(1.03 );
+    transition: all ease .3s;
+}
+
+.lista-productos li p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+span.precio {
+    background-color: yellow;
+    padding: 5px;
+    margin-left: 10px;
+    color: rgb(100, 58, 2);
+    font-size: 25px;
+}
+
+.boton {
+    background-color: yellow;
+    text-decoration: none;
+    padding: 10px 22px;
+    display: inline-block;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: rgb(83, 83, 83);
+    transition: all ease .3s;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: rgb(255, 230, 0);
+    transition: all ease .3s;
+    color: rgb(92, 92, 92);
+}
